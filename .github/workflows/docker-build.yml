@@ -30,8 +30,8 @@ jobs:
         id: build
         uses: docker/build-push-action@v4
         with:
-          context: ./openbsd_docker_amd64
-          file: ./openbsd_docker_amd64/Dockerfile
+          context: .
+          file: ./Dockerfile
           platforms: linux/amd64
           push: false
           tags: |

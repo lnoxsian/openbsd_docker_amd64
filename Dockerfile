@@ -18,6 +18,9 @@ RUN git clone --depth=1 https://github.com/novnc/noVNC.git /opt/noVNC \
 # Cleanup of git repo
 RUN rm -rf /opt/noVNC/.git* || true
 
+# Copying the modded index.html so the user does not stare at a fileindex
+COPY ./assets/index.html /opt/noVNC/index.html
+
 # Remove git from the container
 RUN apk del git
 
